@@ -28,8 +28,9 @@ public class WebService {
     //register
     private static int RESULT_REG_USER_EXIST=2;
     private static int RESULT_REG_NOFILL=3;
-
-    private static String RESULT_CONNECT_FAILED="FAILED";
+    //login
+    private static int RESULT_CONNECT_FAILED=3;
+    private static int RESULT_USERNAME_WRONG=2;
 
 
     private String username,password,nickname,phone;
@@ -55,7 +56,7 @@ public class WebService {
         else
             return RESULT_REG_USER_EXIST;
     }
-    public boolean   Login(String username,String password){
+    public int  Login(String username,String password){
         this.username=username;
         this.password=password;
         String ok="";
@@ -64,13 +65,19 @@ public class WebService {
         try{
             ok=executeHttpGet(flag);
             Log.v("ok:",ok);
+            if (ok.equals("1")){
+                return RESULT_OK;
+            }
+            if (ok.equals("0")){
+                return RESULT_USERNAME_WRONG;
+            }
         }catch (Exception e){
             e.printStackTrace();
         }
-        if (ok.equals("1")){
-            return true;
-        }else
-            return false;
+
+
+        return RESULT_CONNECT_FAILED;
+
     }
     public String executeHttpGet(int flag){
         HttpURLConnection conn =null;
@@ -102,6 +109,7 @@ public class WebService {
                 is=conn.getInputStream();
                 return parseInfo(is);
             }
+            return "";
         }catch (Exception e)
         {
             e.printStackTrace();

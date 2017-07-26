@@ -71,9 +71,7 @@ public class Login extends AppCompatActivity implements View.OnClickListener {
                 dialog.setCancelable(false);
                 dialog.show();
                 flag=1;
-
                 new Thread(logthread).start();
-
                 break;
             case R.id.reg:
                 if(!checkNetwork()){
@@ -102,19 +100,15 @@ public class Login extends AppCompatActivity implements View.OnClickListener {
     }
     private Handler handler =new Handler(){
         public void handleMessage(Message msg){
-            if (msg.arg1==2){
 
-                Toast toast=Toast.makeText(Login.this,"用户名或密码错误",Toast.LENGTH_SHORT);
-                toast.setGravity(Gravity.CENTER,0,0);
-                toast.show();
-            }
+            dialog.dismiss();
+
 //            if(info.equals("2")){
 //                Toast toast=Toast.makeText(Login.this,"用户"+username+"注册成功",Toast.LENGTH_SHORT);
 //                toast.setGravity(Gravity.CENTER,0,0);
 //                toast.show();
 //
 //            }
-            dialog.dismiss();
             if(msg.arg1==1) {
 
                 Intent intent = new Intent(Login.this, Menu.class);
@@ -124,6 +118,24 @@ public class Login extends AppCompatActivity implements View.OnClickListener {
                 startActivity(intent);
                 Login.this.finish();
             }
+            if (msg.arg1==2){
+
+                Toast toast=Toast.makeText(Login.this,"用户名或密码错误",Toast.LENGTH_SHORT);
+                toast.setGravity(Gravity.CENTER,0,0);
+                toast.show();
+            }
+            if (msg.arg1==3){
+
+                Toast toast=Toast.makeText(Login.this,"连接服务器失败",Toast.LENGTH_SHORT);
+                toast.setGravity(Gravity.CENTER,0,0);
+                toast.show();
+            }
+            if(msg.arg1==4){
+
+                Toast toast=Toast.makeText(Login.this,"请将用户名和密码填写完整",Toast.LENGTH_SHORT);
+                toast.setGravity(Gravity.CENTER,0,0);
+                toast.show();
+            }
         }
     };
     Runnable logthread =new Runnable() {
@@ -131,20 +143,15 @@ public class Login extends AppCompatActivity implements View.OnClickListener {
         public void run() {
             username=ed_username.getText().toString();
             password=ed_password.getText().toString();
+            Message message = new Message();
+            if(username.equals("") || password.equals("")){
+                message.arg1=4;
+                handler.sendMessage(message);
+            }
             WebService serv=new WebService();
-            if(serv.Login(username,password)) {
-                Message message = new Message();
-                message.arg1=1;
-                handler.sendMessage(message);
-            }
-            else
-            {
-                Message message = new Message();
-                message.arg1=2;
+                message.arg1=serv.Login(username,password);
                 handler.sendMessage(message);
 
-
-            }
         }
     };
 
