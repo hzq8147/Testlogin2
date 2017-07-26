@@ -1,4 +1,4 @@
-package com.example.a52n.testlogin;
+package com.example.a52n.testlogin.Adapter;
 
 import android.content.Context;
 import android.support.v4.app.Fragment;
@@ -8,6 +8,9 @@ import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.view.View;
 import android.view.ViewGroup;
+
+import com.example.a52n.testlogin.Fragment1;
+import com.example.a52n.testlogin.NewsList;
 
 import java.util.List;
 
@@ -23,9 +26,8 @@ public class MyPagerAdapter extends FragmentPagerAdapter {
     private Fragment1 f4=null;
 
     Context context;
-    public MyPagerAdapter(Context context, FragmentManager fm){
+    public MyPagerAdapter( FragmentManager fm,Context context){
         super(fm);
-        this.context=context;
         f1=new Fragment1("first");
         f2=new NewsList(context);
         f3=new Fragment1("third");
