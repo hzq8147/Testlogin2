@@ -1,6 +1,7 @@
 package com.example.a52n.testlogin;
 
 
+import android.content.Intent;
 import android.support.v4.app.Fragment;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
@@ -8,8 +9,12 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 
 import com.example.a52n.testlogin.Adapter.MyPagerAdapter;
+import com.example.a52n.testlogin.allclass.Userclass;
+
+import org.w3c.dom.Text;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -24,13 +29,19 @@ public class Menu extends AppCompatActivity implements ViewPager.OnPageChangeLis
     private LinearLayout lle,llnew,lllife,llabout;
     private ImageView ive,ivnew,ivlife,ivabout,ivcurrent;
     private MyPagerAdapter madapter;
+    private TextView titlebar;
 
+    private Userclass user;
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.menu);
-        madapter=new MyPagerAdapter(getSupportFragmentManager(),Menu.this);
+
+        Intent intent =getIntent();
+        user=(Userclass)intent.getSerializableExtra("user");
+
+        madapter=new MyPagerAdapter(getSupportFragmentManager(),Menu.this,user);
 
         viewpager=(ViewPager)findViewById(R.id.vpager);
         viewpager.setAdapter(madapter);
@@ -56,6 +67,8 @@ public class Menu extends AppCompatActivity implements ViewPager.OnPageChangeLis
         ivlife=(ImageView)findViewById(R.id.ivlife);
         ivabout=(ImageView)findViewById(R.id.ivabout);
 
+        titlebar=(TextView)findViewById(R.id.actionbartitle);
+
         ive.setSelected(true);
         ivcurrent=ive;
         //initFragment1();
@@ -76,7 +89,7 @@ public class Menu extends AppCompatActivity implements ViewPager.OnPageChangeLis
 //    private void initFragment2(){
 //        FragmentTransaction  transaction =getSupportFragmentManager().beginTransaction();
 //        if (f2==null){
-//            f2=new NewsList(Menu.this);
+//            f2=new My_news_Fragement(Menu.this);
 //            transaction.add(R.id.mainframe,f2);
 //        }
 //        hideFragment(transaction);
@@ -159,6 +172,7 @@ public class Menu extends AppCompatActivity implements ViewPager.OnPageChangeLis
         switch (id){
             case R.id.lle:
                 viewpager.setCurrentItem(0);
+                titlebar.setText("我的金惠家");
                 //initFragment1();
                 ive.setSelected(true);
                 ivcurrent=ive;
@@ -166,6 +180,8 @@ public class Menu extends AppCompatActivity implements ViewPager.OnPageChangeLis
             case R.id.llnews:
 
                 viewpager.setCurrentItem(1);
+
+                titlebar.setText("惠家新闻");
                 //initFragment2();
                 ivnew.setSelected(true);
                 ivcurrent=ivnew;
@@ -174,12 +190,16 @@ public class Menu extends AppCompatActivity implements ViewPager.OnPageChangeLis
                 //initFragment3();
 
                 viewpager.setCurrentItem(2);
+
+                titlebar.setText("惠家生活");
                 ivlife.setSelected(true);
                 ivcurrent=ivlife;
                 break;
             case R.id.llabout:
 
                 viewpager.setCurrentItem(3);
+
+                titlebar.setText("关于金惠家");
             //    initFragment4();
                 ivabout.setSelected(true);
                 ivcurrent=ivabout;

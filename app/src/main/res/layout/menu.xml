@@ -12,22 +12,23 @@
         android:orientation="vertical" >
 
         <TextView
+            android:id="@+id/actionbartitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:text="惠家E站"
+            android:text="我的金惠家"
             android:textColor="#ffffff"
-            android:textSize="20sp"
-            android:textStyle="bold" />
+            android:textSize="20sp" />
     </LinearLayout>
 
 
-<android.support.v4.view.ViewPager
-    android:id="@+id/vpager"
-    android:layout_width="match_parent"
-    android:layout_height="0dp"
-    android:layout_weight="1"
-    />
+    <android.support.v4.view.ViewPager
+        android:id="@+id/vpager"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        />
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="55dp"

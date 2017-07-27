@@ -42,7 +42,7 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="29dp"
+        android:layout_marginTop="21dp"
         android:id="@+id/linearLayout2"
         android:layout_below="@+id/linearLayout"
         android:layout_alignParentLeft="true"
@@ -72,7 +72,7 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="29dp"
+        android:layout_marginTop="21dp"
         android:id="@+id/linearLayout3"
         android:layout_below="@+id/linearLayout2"
         android:layout_alignParentLeft="true"
@@ -80,7 +80,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="昵称"
+            android:text="真实姓名"
             android:id="@+id/text_nickname"
             android:layout_marginLeft="70dp"/>
 
@@ -100,7 +100,7 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="29dp"
+        android:layout_marginTop="21dp"
         android:id="@+id/linearLayout4"
         android:layout_below="@+id/linearLayout3"
         android:layout_alignParentLeft="true"
@@ -126,13 +126,68 @@
             android:layout_marginRight="55dp"
             android:layout_marginEnd="55dp"/>
     </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="21dp"
+        android:id="@+id/linearLayout5"
+        android:layout_below="@+id/linearLayout4"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="身份证号"
+            android:id="@+id/text_personid"
+            android:layout_marginLeft="70dp"/>
+
+        <EditText
+            android:id="@+id/edit_personid"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:maxLength="20"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="55dp"
+            android:layout_marginEnd="55dp"/>
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="21dp"
+        android:id="@+id/linearLayout6"
+        android:layout_below="@+id/linearLayout5"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="常用地址"
+            android:id="@+id/text_address"
+            android:layout_marginLeft="70dp"/>
+
+        <EditText
+            android:id="@+id/edit_address"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:maxLength="20"
+            android:singleLine="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="55dp"
+            android:layout_marginEnd="55dp"/>
+    </RelativeLayout>
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/btn_reg"
         android:text="注册"
-        android:layout_below="@+id/linearLayout4"
+        android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="70dp"/>
+        android:layout_marginBottom="55dp"/>
 
 </RelativeLayout>

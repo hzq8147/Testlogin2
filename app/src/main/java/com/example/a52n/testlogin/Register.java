@@ -14,8 +14,8 @@ import android.widget.Toast;
 public class Register extends AppCompatActivity {
 
     Button btn_reg;
-    EditText ed_username,ed_password,ed_nickname,ed_phone;
-    String reg_username,reg_password,reg_nickname,reg_phone;
+    EditText ed_username,ed_password,ed_nickname,ed_phone,ed_personid,ed_address;
+    String reg_username,reg_password,reg_nickname,reg_phone,reg_personid,reg_address;
     int flag=2;
     @Override
 
@@ -27,6 +27,9 @@ public class Register extends AppCompatActivity {
         ed_password=(EditText)findViewById(R.id.edit_password);
         ed_nickname=(EditText)findViewById(R.id.edit_nickname);
         ed_phone=(EditText)findViewById(R.id.edit_phone);
+        ed_personid=(EditText)findViewById(R.id.edit_personid);
+        ed_address=(EditText)findViewById(R.id.edit_address);
+
         btn_reg=(Button)findViewById(R.id.btn_reg);
 
         btn_reg.setOnClickListener(new View.OnClickListener() {
@@ -36,6 +39,8 @@ public class Register extends AppCompatActivity {
                 reg_password=ed_password.getText().toString();
                 reg_nickname=ed_nickname.getText().toString();
                 reg_phone=ed_phone.getText().toString();
+                reg_personid=ed_personid.getText().toString();
+                reg_address=ed_address.getText().toString();
 
                 new Thread(regthread).start();
 
@@ -75,7 +80,7 @@ public class Register extends AppCompatActivity {
 
                     Message msg=new Message();
 
-                    msg.arg1=serv.Regeister(reg_username,reg_password,reg_nickname,reg_phone);
+                    msg.arg1=serv.Regeister(reg_username,reg_password,reg_nickname,reg_phone,reg_personid,reg_address);
                     handler.sendMessage(msg);
             }catch (Exception e){
                 e.printStackTrace();

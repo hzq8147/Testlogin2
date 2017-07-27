@@ -23,26 +23,34 @@ import java.net.URL;
  */
 
 public class WebService {
-    private static  String IP ="192.168.48.41:8080";
+    private static  String IP ="192.168.30.1:8080";
     private static int RESULT_OK=1;
-    //register
+    //register flag=2
     private static int RESULT_REG_USER_EXIST=2;
     private static int RESULT_REG_NOFILL=3;
-    //login
+    //login flag=1
     private static int RESULT_CONNECT_FAILED=3;
     private static int RESULT_USERNAME_WRONG=2;
+    //newslist flag=3
+    //getinfo flag=4
+    private static String RESULT_GETINFO_FAILED="Fail";
 
 
-    private String username,password,nickname,phone;
-    public int Regeister(String username,String password, String nickname,String phone){
+    private String username,password,nickname,phone,personid,address;
+    //addmoney
+    private String addmoney;
+    public int Regeister(String username,String password, String nickname,String phone,String personid,String address){
         this.username=username;
         this.password=password;
         this.nickname=nickname;
         this.phone=phone;
-        if (username.length()==0 || password.length()==0 || nickname.length()==0 || phone.length()==0){
-            return  RESULT_REG_NOFILL;
+        this.personid=personid;
+        this.address=address;
+
+        if (username.length()==0 || password.length()==0 || nickname.length()==0 || phone.length()==0 || personid.length()==0 || address.length()==0 ){
+            return RESULT_REG_NOFILL;
         }
-        String ok="";
+        String ok="default";
         int flag=2;
         try {
              ok = executeHttpGet(flag);
@@ -59,7 +67,7 @@ public class WebService {
     public int  Login(String username,String password){
         this.username=username;
         this.password=password;
-        String ok="";
+        String ok="default";
         int flag=1;
 
         try{
@@ -79,6 +87,39 @@ public class WebService {
         return RESULT_CONNECT_FAILED;
 
     }
+    public String getinfo(String username){
+        this.username=username;
+
+        int flag=4;
+
+        String infostring="";
+        try{
+            infostring=executeHttpGet(flag);
+            return infostring;
+        }catch (Exception e)
+        {
+            e.printStackTrace();
+        }
+            return RESULT_GETINFO_FAILED;
+    }
+    public Boolean addmoney(String username,String addmoney){
+        this.username=username;
+        this.addmoney=addmoney;
+        String ok="default";
+
+        int flag=5;
+        try{
+            ok=executeHttpGet(flag);
+            if (ok.equals("1")){
+                return true;
+            }
+            if (ok.equals("Fail")||ok.equals("0"))
+                return false;
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+        return false;
+    }
     public String executeHttpGet(int flag){
         HttpURLConnection conn =null;
         InputStream is =null;
@@ -92,10 +133,20 @@ public class WebService {
                     break;
                 case 2:
                     path = "http://" + IP + "/Reglet";
-                    path = path + "?username=" + username + "&password=" + password+"&nickname="+nickname+"&phone="+phone;
+                    path = path + "?username=" + username + "&password=" + password+"&nickname="+nickname+"&phone="+phone+"&personid="+personid+"&address="+address;
                     break;
                 case 3:
                     path = "http://" + IP + "/Newslet";
+                    break;
+                case 4:
+                    path = "http://" + IP + "/Getinfolet";
+                    path = path + "?username="+username;
+                    break;
+                case 5:
+                    path = "http://" + IP + "/Addmoneylet";
+                    path = path + "?username="+username+"&money_add=" +addmoney;
+                    break;
+
             }
 
             conn=(HttpURLConnection)new URL(path).openConnection();
@@ -109,7 +160,7 @@ public class WebService {
                 is=conn.getInputStream();
                 return parseInfo(is);
             }
-            return "";
+            return "Fail";
         }catch (Exception e)
         {
             e.printStackTrace();

@@ -19,11 +19,17 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-        <activity android:name=".NewsList">
+        <activity android:name=".Fragment.My_news_Fragement">
         </activity>
         <activity android:name=".Register">
         </activity>
         <activity android:name=".Menu">
+        </activity>
+        <activity android:name=".My_e_activity.My_e_account_activity">
+        </activity>
+        <activity android:name=".My_e_activity.My_e_money_activity">
+        </activity>
+        <activity android:name=".My_e_activity.My_e_money_add">
         </activity>
     </application>
 

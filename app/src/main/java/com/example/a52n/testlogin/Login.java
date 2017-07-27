@@ -1,6 +1,7 @@
 package com.example.a52n.testlogin;
 
 
+import android.app.ActivityManager;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
@@ -18,13 +19,21 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.a52n.testlogin.allclass.Userclass;
+
 import junit.framework.Test;
+
+import org.json.JSONArray;
+import org.json.JSONObject;
+
+import java.util.ArrayList;
 
 
 public class Login extends AppCompatActivity implements View.OnClickListener {
 
     private Button logbtn;
 
+    private Userclass uesr;
     private TextView regbtn;
 
    // private TextView infotv;
@@ -32,6 +41,8 @@ public class Login extends AppCompatActivity implements View.OnClickListener {
     String username,password;
     private int flag;
 
+    Userclass user;
+    String infostring;
     EditText ed_username,ed_password;
 
     private ProgressDialog dialog;
@@ -59,6 +70,9 @@ public class Login extends AppCompatActivity implements View.OnClickListener {
 
         switch(v.getId()){
             case R.id.log:
+
+                username=ed_username.getText().toString();
+                password=ed_password.getText().toString();
                 if(!checkNetwork()){
                     Toast toast = Toast.makeText(Login.this,"没联网",Toast.LENGTH_SHORT);
                     toast.setGravity(Gravity.CENTER,0,0);
@@ -110,13 +124,11 @@ public class Login extends AppCompatActivity implements View.OnClickListener {
 //
 //            }
             if(msg.arg1==1) {
+                dialog.setMessage("请稍等...");
+                dialog.setCancelable(false);
+                dialog.show();
+                new Thread(getinfo).start();
 
-                Intent intent = new Intent(Login.this, Menu.class);
-                intent.putExtra("username", username);
-                intent.putExtra("password", password);
-
-                startActivity(intent);
-                Login.this.finish();
             }
             if (msg.arg1==2){
 
@@ -136,39 +148,55 @@ public class Login extends AppCompatActivity implements View.OnClickListener {
                 toast.setGravity(Gravity.CENTER,0,0);
                 toast.show();
             }
+            if(msg.arg1==5){
+                user =Service.getuser(infostring);
+                Intent intent = new Intent(Login.this, Menu.class);
+                intent.putExtra("user",user);
+                startActivity(intent);
+                Login.this.finish();
+            }
+            if (msg.arg1==6){
+                Toast toast=Toast.makeText(Login.this,"获取个人信息失败，请稍候再试",Toast.LENGTH_SHORT);
+                toast.setGravity(Gravity.CENTER,0,0);
+                toast.show();
+            }
         }
     };
+
     Runnable logthread =new Runnable() {
         @Override
         public void run() {
-            username=ed_username.getText().toString();
-            password=ed_password.getText().toString();
             Message message = new Message();
             if(username.equals("") || password.equals("")){
                 message.arg1=4;
                 handler.sendMessage(message);
             }
-            WebService serv=new WebService();
-                message.arg1=serv.Login(username,password);
+            else {
+                WebService serv = new WebService();
+                message.arg1 = serv.Login(username, password);
                 handler.sendMessage(message);
+            }
 
         }
     };
+    Runnable getinfo=new Runnable() {
 
-//    public  class MyThread implements Runnable{
-//        @Override
-//        public void run() {
-//
-//
-//
-//            handler.post(new Runnable() {
-//                @Override
-//                public void run() {
-//
-//                }
-//            });
-//        }
-//    }
+        @Override
+        public void run() {
+            infostring="";
+            WebService serv=new WebService();
+            infostring=serv.getinfo(username);
+            Message msg=new Message();
+            if (infostring.equals("Fail")){
+            msg.arg1=6;
+            }
+            {
+                msg.arg1=5;
+            }
+            handler.sendMessage(msg);
+
+        }
+    };
 
     private boolean checkNetwork(){
         ConnectivityManager connManager=(ConnectivityManager)getSystemService(Context
