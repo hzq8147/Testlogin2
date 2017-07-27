@@ -94,13 +94,16 @@
 
 
     <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="70dp"
+        android:layout_height="40dp"
         android:text="登陆"
         android:id="@+id/log"
-        android:layout_marginTop="11dp"
+        android:textStyle=""
+        android:textSize="20sp"
+        android:background="@android:drawable/editbox_background"
         android:layout_below="@+id/reg"
-        android:layout_centerHorizontal="true"/>
+        android:layout_centerHorizontal="true" />
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -110,7 +113,8 @@
         android:textColor="#696969"
         android:layout_below="@+id/linearLayout"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="20dp"/>
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="30dp" />
 
 
 </RelativeLayout>
