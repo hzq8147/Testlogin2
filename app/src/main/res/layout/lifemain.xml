@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="#03a9f4">
+
+        <Button
+            android:layout_width="40dp"
+            android:background="@drawable/back"
+            android:id="@+id/back"
+            android:layout_height="40dp" />
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="惠家生活"
+            android:textColor="#FFFF"
+            android:gravity="center_horizontal"
+            android:textSize="20sp"
+            />
+    </LinearLayout>
+
+    <ImageView
+        android:src="@drawable/housekeeping"
+        android:layout_width="75dp"
+        android:layout_height="70dp"
+        android:layout_marginLeft="138dp"
+        android:layout_marginTop="100dp"/>
+
+    <ImageView
+        android:src="@drawable/teaching"
+        android:layout_width="75dp"
+        android:layout_height="70dp"
+        android:layout_marginLeft="73dp"
+        android:layout_marginTop="133dp"
+        />
+
+    <ImageView
+        android:layout_width="75dp"
+        android:layout_height="70dp"
+        android:background="@drawable/unlocking"
+        android:layout_marginLeft="49dp"
+        android:layout_marginTop="200dp"
+        />
+
+    <ImageView
+        android:src="@drawable/creditmall"
+        android:layout_width="75dp"
+        android:layout_marginLeft="101dp"
+        android:layout_marginTop="253dp"
+        android:layout_height="70dp" />
+
+
+    <ImageView
+        android:layout_height="70dp"
+        android:src="@drawable/vegetable"
+        android:layout_marginLeft="173dp"
+        android:layout_marginTop="253dp"
+        android:layout_width="80dp" />
+
+    <ImageView
+        android:layout_height="70dp"
+        android:src="@drawable/renting"
+        android:layout_marginLeft="225dp"
+        android:layout_marginTop="200dp"
+        android:layout_width="80dp" />
+
+    <ImageView
+        android:layout_height="70dp"
+        android:src="@drawable/maintenance"
+        android:layout_marginLeft="200dp"
+        android:layout_marginTop="133dp"
+        android:layout_width="80dp" />
+
+
+</RelativeLayout>
