@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#ffffff"
@@ -26,81 +26,57 @@
             />
     </LinearLayout>
 
-    <LinearLayout
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:orientation="horizontal">
-
-    <Button
-        android:background="@drawable/housekeeping"
+    <ImageView
+        android:src="@drawable/housekeeping"
         android:layout_width="75dp"
-        android:layout_height="70dp" />
+        android:layout_height="70dp"
+        android:layout_marginLeft="138dp"
+        android:layout_marginTop="100dp"/>
 
-        <Button
-            android:background="@drawable/teaching"
-            android:layout_width="75dp"
-            android:layout_height="70dp"
-            android:layout_marginLeft="25dp"/>
+    <ImageView
+        android:src="@drawable/teaching"
+        android:layout_width="75dp"
+        android:layout_height="70dp"
+        android:layout_marginLeft="73dp"
+        android:layout_marginTop="133dp"
+        />
 
-        <Button
+    <ImageView
         android:layout_width="75dp"
         android:layout_height="70dp"
         android:background="@drawable/unlocking"
-            android:layout_marginLeft="25dp"
-             />
+        android:layout_marginLeft="49dp"
+        android:layout_marginTop="200dp"
+        />
 
-        <Button
-            android:layout_height="70dp"
-            android:background="@drawable/creditmall"
-            android:layout_weight="0.04"
-            android:layout_width="75dp"
-            android:layout_marginLeft="25dp"/>
+    <ImageView
+        android:src="@drawable/creditmall"
+        android:layout_width="75dp"
+        android:layout_marginLeft="101dp"
+        android:layout_marginTop="253dp"
+        android:layout_height="70dp" />
 
-    </LinearLayout>
 
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
+    <ImageView
+        android:layout_height="70dp"
+        android:src="@drawable/vegetable"
+        android:layout_marginLeft="173dp"
+        android:layout_marginTop="253dp"
+        android:layout_width="80dp" />
 
-        <Button
-            android:layout_height="70dp"
-            android:background="@drawable/vegetable"
-            android:layout_weight="0.63"
-            android:layout_marginLeft="40dp"
-            android:layout_width="80dp" />
+    <ImageView
+        android:layout_height="70dp"
+        android:src="@drawable/renting"
+        android:layout_marginLeft="225dp"
+        android:layout_marginTop="200dp"
+        android:layout_width="80dp" />
 
-        <Button
-            android:layout_height="70dp"
-            android:background="@drawable/renting"
-            android:layout_weight="0.42"
-            android:layout_marginLeft="30dp"
-            android:layout_width="80dp" />
+    <ImageView
+        android:layout_height="70dp"
+        android:src="@drawable/maintenance"
+        android:layout_marginLeft="200dp"
+        android:layout_marginTop="133dp"
+        android:layout_width="80dp" />
 
-        <Button
-            android:layout_height="70dp"
-            android:background="@drawable/maintenance"
-            android:layout_weight="1"
-            android:layout_marginLeft="30dp"
-            android:layout_width="80dp" />
 
-    </LinearLayout>
-
-    <ListView
-        android:layout_width="match_parent"
-        android:layout_height="200dp">
-
-    </ListView>
-
-    <Gallery
-        android:layout_width="match_parent"
-        android:layout_height="160dp">
-
-    </Gallery>
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="右滑显示更多"
-        android:layout_gravity="center"/>
-</LinearLayout>
+</RelativeLayout>
