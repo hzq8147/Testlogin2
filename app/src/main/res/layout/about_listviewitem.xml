@@ -12,7 +12,7 @@
             android:id="@+id/image1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:src="@mipmap/ic_shelf_category_divider" />
+            android:src="@drawable/ic_shelf_category_divider" />
 
         <TextView
             android:id="@+id/textView1"
@@ -39,8 +39,7 @@
                 android:id="@+id/image2"
                 android:layout_width="150dp"
                 android:layout_height="150dp"
-                android:layout_alignParentRight="true"
-                android:src="@mipmap/clientsource"/>
+                android:layout_alignParentRight="true" />
 
         </RelativeLayout>
 
