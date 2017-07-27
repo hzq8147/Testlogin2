@@ -30,52 +30,55 @@
         android:src="@drawable/housekeeping"
         android:layout_width="75dp"
         android:layout_height="70dp"
-        android:layout_marginLeft="138dp"
-        android:layout_marginTop="100dp"/>
+        android:layout_marginLeft="155dp"
+        android:layout_marginTop="110dp"/>
 
     <ImageView
         android:src="@drawable/teaching"
         android:layout_width="75dp"
         android:layout_height="70dp"
-        android:layout_marginLeft="73dp"
-        android:layout_marginTop="133dp"
-        />
+        android:layout_marginLeft="75dp"
+        android:layout_marginTop="150dp"
+        android:id="@+id/imageView10" />
+
+    <ImageView
+        android:layout_height="70dp"
+        android:src="@drawable/vegetable"
+        android:layout_marginLeft="235dp"
+        android:layout_marginTop="150dp"
+        android:layout_width="80dp" />
 
     <ImageView
         android:layout_width="75dp"
         android:layout_height="70dp"
         android:background="@drawable/unlocking"
-        android:layout_marginLeft="49dp"
-        android:layout_marginTop="200dp"
-        />
+        android:layout_alignTop="@+id/imageView9"
+        android:layout_alignRight="@+id/imageView10"
+        android:layout_alignEnd="@+id/imageView10"
+        android:layout_marginRight="20dp"
+        android:layout_marginEnd="20dp" />
 
     <ImageView
         android:src="@drawable/creditmall"
         android:layout_width="75dp"
-        android:layout_marginLeft="101dp"
-        android:layout_marginTop="253dp"
+        android:layout_marginLeft="110dp"
+        android:layout_marginTop="300dp"
         android:layout_height="70dp" />
 
 
     <ImageView
         android:layout_height="70dp"
-        android:src="@drawable/vegetable"
-        android:layout_marginLeft="173dp"
-        android:layout_marginTop="253dp"
-        android:layout_width="80dp" />
-
-    <ImageView
-        android:layout_height="70dp"
         android:src="@drawable/renting"
-        android:layout_marginLeft="225dp"
-        android:layout_marginTop="200dp"
-        android:layout_width="80dp" />
+        android:layout_marginLeft="255dp"
+        android:layout_marginTop="230dp"
+        android:layout_width="80dp"
+        android:id="@+id/imageView9" />
 
     <ImageView
         android:layout_height="70dp"
         android:src="@drawable/maintenance"
         android:layout_marginLeft="200dp"
-        android:layout_marginTop="133dp"
+        android:layout_marginTop="300dp"
         android:layout_width="80dp" />
 
 

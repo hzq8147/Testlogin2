@@ -3,9 +3,22 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
+        <TextView
+            android:id="@+id/textv"
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:text="惠家新闻"
+            android:textColor="#FFFF"
+            android:gravity="center"
+            android:layout_gravity="center_vertical"
+            android:textSize="20sp"
+            android:background="#03a9f4"
+            />
+
     <ListView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_below="@id/textv"
         android:id="@+id/newslist">
 
     </ListView>
