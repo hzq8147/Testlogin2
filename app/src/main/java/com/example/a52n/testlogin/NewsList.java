@@ -35,6 +35,7 @@ public class NewsList extends Fragment {
     ListView listview;
     List<Newsclass> newslist;
     String username,password;
+    String newsName,newsClass,newsText;
     String newstring;
     int flag;
 
