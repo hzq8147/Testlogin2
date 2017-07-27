@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="#03a9f4">
+
+        <Button
+            android:layout_width="40dp"
+            android:background="@drawable/back"
+            android:id="@+id/back"
+            android:layout_height="40dp" />
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="惠家生活"
+            android:textColor="#FFFF"
+            android:gravity="center_horizontal"
+            android:textSize="20sp"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+    <Button
+        android:background="@drawable/housekeeping"
+        android:layout_width="75dp"
+        android:layout_height="70dp" />
+
+        <Button
+            android:background="@drawable/teaching"
+            android:layout_width="75dp"
+            android:layout_height="70dp"
+            android:layout_marginLeft="25dp"/>
+
+        <Button
+        android:layout_width="75dp"
+        android:layout_height="70dp"
+        android:background="@drawable/unlocking"
+            android:layout_marginLeft="25dp"
+             />
+
+        <Button
+            android:layout_height="70dp"
+            android:background="@drawable/creditmall"
+            android:layout_weight="0.04"
+            android:layout_width="75dp"
+            android:layout_marginLeft="25dp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:layout_height="70dp"
+            android:background="@drawable/vegetable"
+            android:layout_weight="0.63"
+            android:layout_marginLeft="40dp"
+            android:layout_width="80dp" />
+
+        <Button
+            android:layout_height="70dp"
+            android:background="@drawable/renting"
+            android:layout_weight="0.42"
+            android:layout_marginLeft="30dp"
+            android:layout_width="80dp" />
+
+        <Button
+            android:layout_height="70dp"
+            android:background="@drawable/maintenance"
+            android:layout_weight="1"
+            android:layout_marginLeft="30dp"
+            android:layout_width="80dp" />
+
+    </LinearLayout>
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="200dp">
+
+    </ListView>
+
+    <Gallery
+        android:layout_width="match_parent"
+        android:layout_height="160dp">
+
+    </Gallery>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="右滑显示更多"
+        android:layout_gravity="center"/>
+</LinearLayout>
