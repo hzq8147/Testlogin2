@@ -6,26 +6,24 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="50dp"
+        android:layout_height="40dp"
         android:background="#03a9f4">
 
-        <ImageView
-            android:id="@+id/image"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentLeft="true"
-            android:layout_marginTop="5sp"
-            android:src="@drawable/back"/>
+        <Button
+            android:layout_width="40dp"
+            android:background="@drawable/back"
+            android:id="@+id/back"
+            android:layout_height="40dp" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="50dp"
             android:text="房屋信息"
-            android:textSize="30sp"
-            android:layout_marginTop="13dp"
+            android:textSize="20sp"
+            android:gravity="center_vertical"
             android:layout_centerInParent ="true"
-            android:textColor="#FFFFFF"/>
-
+            android:textColor="#FFFFFF"
+            />
     </RelativeLayout>
 
     <RelativeLayout
@@ -37,7 +35,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="房屋地址:"
-            android:textSize="20sp"
+            android:textSize="15sp"
             android:layout_marginLeft="20dp"
             android:layout_marginTop="25dp"
             android:textColor="#0A0A0A"/>
@@ -61,7 +59,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="房主姓名:"
-            android:textSize="20sp"
+            android:textSize="15sp"
             android:layout_marginLeft="20dp"
             android:layout_marginTop="20dp"
             android:textColor="#0A0A0A"/>
@@ -85,7 +83,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="房主电话:"
-            android:textSize="20sp"
+            android:textSize="15sp"
             android:layout_marginLeft="20dp"
             android:layout_marginTop="20dp"
             android:textColor="#0A0A0A"/>
@@ -109,7 +107,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="房主照片:"
-            android:textSize="20sp"
+            android:textSize="15sp"
             android:layout_marginLeft="20dp"
             android:layout_marginTop="20dp"
             android:textColor="#0A0A0A"/>
@@ -133,7 +131,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="备注:"
-            android:textSize="20sp"
+            android:textSize="15sp"
             android:layout_marginLeft="20dp"
             android:layout_marginTop="20dp"
             android:textColor="#0A0A0A"/>
@@ -157,7 +155,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="出租价格:"
-            android:textSize="20sp"
+            android:textSize="15sp"
             android:layout_marginLeft="20dp"
             android:layout_marginTop="20dp"
             android:textColor="#0A0A0A"/>
@@ -169,6 +167,7 @@
             android:textSize="16sp"
             android:layout_alignBottom="@id/textView10"
             android:layout_marginLeft="120dp"/>
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

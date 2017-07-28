@@ -5,14 +5,14 @@
     android:orientation="vertical">
 
     <LinearLayout
-        android:layout_width="match_parent"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:background="#03a9f4">
         <TextView
             android:layout_width="fill_parent"
             android:layout_height="40dp"
-            android:text="兑换下单"
+            android:text="预约下单"
             android:textColor="#FFFF"
             android:gravity="center"
             android:textSize="20sp"/>
@@ -38,43 +38,17 @@
             android:textSize="15sp"
             android:layout_weight="7"/>
     </LinearLayout>
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="订单内容："
-        android:textSize="15sp"
-        android:layout_marginTop="10dp"
-        android:layout_marginLeft="10dp" />
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:orientation="horizontal">
-
-        <ImageView
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:textSize="15sp"
-            android:layout_marginLeft="10dp"
-            android:layout_weight="1"/>
-
-        <TextView
-            android:layout_width="0dp"
-            android:layout_height="50dp"
-            android:textSize="15sp"
-            android:layout_weight="1"/>
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:layout_height="30dp"
+        android:orientation="horizontal"
+        android:layout_marginBottom="10dp">
 
         <TextView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:text="地址："
+            android:text="入住时间："
             android:textSize="15sp"
             android:layout_marginLeft="10dp"
             android:layout_weight="2"/>
@@ -86,10 +60,34 @@
             android:background="@android:drawable/editbox_background"
             android:layout_weight="7"/>
     </LinearLayout>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:layout_marginBottom="10dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="备注："
+            android:textSize="15sp"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="2"
+            />
+
+        <EditText
+            android:layout_width="0dp"
+            android:layout_height="80dp"
+            android:textSize="15sp"
+            android:background="@android:drawable/editbox_background"
+            android:layout_weight="7"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:orientation="horizontal"
+        android:layout_marginBottom="10dp">
 
         <TextView
             android:layout_width="0dp"
@@ -115,16 +113,18 @@
         <TextView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:text="所需积分："
+            android:text="价格："
             android:textSize="15sp"
             android:layout_marginLeft="10dp"
-            android:layout_weight="2"/>
+            android:layout_weight="2"
+            android:layout_gravity="center_vertical"/>
 
         <TextView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:textSize="15sp"
-            android:layout_weight="7"/>
+            android:layout_weight="7"
+            android:layout_gravity="center_vertical"/>
     </LinearLayout>
 
     <RelativeLayout
@@ -155,4 +155,6 @@
             android:layout_marginRight="67dp"
             android:layout_marginEnd="67dp" />
     </RelativeLayout>
+
+
 </LinearLayout>

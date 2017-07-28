@@ -12,7 +12,7 @@
         <TextView
             android:layout_width="fill_parent"
             android:layout_height="40dp"
-            android:text="家政服务"
+            android:text="家教预约"
             android:textColor="#FFFF"
             android:gravity="center"
             android:textSize="20sp"/>
@@ -146,9 +146,8 @@
 
         <Button
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="40dp"
             android:text="确认下单"
-            android:id="@+id/sure"
             android:background="@drawable/shape"
             android:layout_marginStart="67dp"
             android:layout_alignParentTop="true"
@@ -159,14 +158,14 @@
 
         <Button
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="40dp"
             android:text="取消"
             android:background="@drawable/shape"
+            android:layout_alignParentTop="true"
             android:layout_marginTop="110dp"
             android:layout_alignParentRight="true"
             android:layout_alignParentEnd="true"
-            android:layout_marginRight="67dp"
-            android:layout_marginEnd="56dp" />
+            android:layout_marginEnd="67dp" />
     </RelativeLayout>
 
 

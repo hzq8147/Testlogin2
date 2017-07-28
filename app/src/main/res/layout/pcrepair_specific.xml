@@ -4,10 +4,9 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
+        android:layout_height="40dp"
         android:background="#03a9f4">
 
         <Button
@@ -15,15 +14,17 @@
             android:background="@drawable/back"
             android:id="@+id/back"
             android:layout_height="40dp" />
+
         <TextView
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:text="电脑IT维护服务"
-            android:textColor="#FFFF"
-            android:gravity="center_horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:text="维护服务详情"
             android:textSize="20sp"
+            android:gravity="center_vertical"
+            android:layout_centerInParent ="true"
+            android:textColor="#FFFFFF"
             />
-    </LinearLayout>
+    </RelativeLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -59,10 +60,11 @@
             android:textSize="15sp"/>
 
         <TextView
+            android:id="@+id/textView13"
             android:layout_width="0dp"
             android:layout_height="270dp"
             android:layout_weight="7"
-            android:textSize="15sp"/>
+            android:textSize="15sp" />
     </LinearLayout>
 
     <ImageView
@@ -80,7 +82,7 @@
 
         <Button
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="40dp"
             android:text="预约下单"
             android:background="@drawable/shape"
             android:layout_alignParentTop="true"
@@ -89,7 +91,7 @@
 
         <Button
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="40dp"
             android:text="取消"
             android:textSize="15sp"
             android:layout_marginRight="67dp"

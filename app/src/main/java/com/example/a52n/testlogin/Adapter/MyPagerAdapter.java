@@ -2,7 +2,7 @@ package com.example.a52n.testlogin.Adapter;
 
 import com.example.a52n.testlogin.Fragment1;
 import com.example.a52n.testlogin.Fragment.My_news_Fragement;
-import com.example.a52n.testlogin.My_e_Fragment;
+import com.example.a52n.testlogin.Fragment.My_e_Fragment;
 import com.example.a52n.testlogin.allclass.Userclass;
 import android.content.Context;
 import android.support.v4.app.Fragment;

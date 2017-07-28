@@ -1,6 +1,7 @@
 package com.example.a52n.testlogin.Fragment;
 
 
+import android.annotation.SuppressLint;
 import android.support.v4.app.Fragment;
 import android.app.ProgressDialog;
 import android.content.Context;

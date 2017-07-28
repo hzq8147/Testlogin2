@@ -1,4 +1,4 @@
-package com.example.a52n.testlogin;
+package com.example.a52n.testlogin.Fragment;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -11,6 +11,7 @@ import android.widget.TextView;
 
 import com.example.a52n.testlogin.My_e_activity.My_e_account_activity;
 import com.example.a52n.testlogin.My_e_activity.My_e_money_activity;
+import com.example.a52n.testlogin.R;
 import com.example.a52n.testlogin.allclass.Userclass;
 
 
