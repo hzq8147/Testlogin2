@@ -1,4 +1,4 @@
-package com.example.a52n.testlogin;
+package com.example.a52n.testlogin.allclass;
 
 import android.graphics.Bitmap;
 
@@ -10,7 +10,6 @@ public class Newsclass {
     String newsclass;
     String context;
     String picurl;
-
     Bitmap pic;
 
     public Bitmap getPic() {

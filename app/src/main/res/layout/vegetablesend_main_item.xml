@@ -30,9 +30,8 @@
 
             <TextView
                 android:layout_width="wrap_content"
-                android:layout_height="40dp"
+                android:layout_height="34dp"
                 android:textSize="15sp" />//菜名
-
 
         </LinearLayout>
 
@@ -50,7 +49,7 @@
 
             <TextView
                 android:layout_width="wrap_content"
-                android:layout_height="30dp"
+                android:layout_height="33dp"
                 android:textSize="13sp"
                 android:layout_gravity="center_vertical"/>//重量
 
@@ -76,7 +75,7 @@
 
             <TextView
                 android:layout_width="wrap_content"
-                android:layout_height="30dp"
+                android:layout_height="33dp"
                 android:textSize="15sp"
                 android:layout_gravity="center_vertical"/>//单价
 

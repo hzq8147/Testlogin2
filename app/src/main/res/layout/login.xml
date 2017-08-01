@@ -59,14 +59,13 @@
 
         <EditText
             android:id="@+id/username"
-            android:layout_width="145dp"
+            android:layout_width="150dp"
             android:layout_height="wrap_content"
             android:layout_marginLeft="60dp"
-            android:layout_weight="0.19"
             android:maxLength="20"
-            android:maxLines="1"
-            android:singleLine="true" />
+            android:maxLines="1" />
     </LinearLayout>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -90,8 +89,7 @@
             android:layout_marginLeft="85dp"
             android:inputType="textPassword"
             android:maxLength="20"
-            android:maxLines="1"
-            android:singleLine="true"/>
+            android:maxLines="1" />
     </LinearLayout>
 
 

@@ -11,7 +11,7 @@ import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
-import com.example.a52n.testlogin.Newsclass;
+import com.example.a52n.testlogin.allclass.Newsclass;
 import com.example.a52n.testlogin.R;
 
 import java.util.List;
@@ -57,10 +57,10 @@ public class newsadapter extends BaseAdapter {
             listitemView=new ListitemView();
             view=View.inflate(context,R.layout.news_item,null);
 
-            listitemView.newsname=(TextView) view.findViewById(R.id.newsname);
-            listitemView.newsclass=(TextView)view.findViewById(R.id.newsclass);
-            listitemView.ncontext=(TextView)view.findViewById(R.id.newscontext);
-            listitemView.newspic=(ImageView)view.findViewById(R.id.newsimg);
+            listitemView.newsname=view.findViewById(R.id.newsname);
+            listitemView.newsclass=view.findViewById(R.id.newsclass);
+            listitemView.ncontext=view.findViewById(R.id.newscontext);
+            listitemView.newspic=view.findViewById(R.id.newsimg);
             //pic
             view.setTag(listitemView);
         }else{

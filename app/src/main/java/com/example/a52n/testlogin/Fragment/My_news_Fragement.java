@@ -1,7 +1,6 @@
 package com.example.a52n.testlogin.Fragment;
 
 
-import android.annotation.SuppressLint;
 import android.support.v4.app.Fragment;
 import android.app.ProgressDialog;
 import android.content.Context;
@@ -16,13 +15,13 @@ import android.view.ViewGroup;
 import android.widget.ListView;
 
 import com.example.a52n.testlogin.Adapter.newsadapter;
+import com.example.a52n.testlogin.allclass.Newsclass;
 
 import org.json.JSONArray;
 import org.json.JSONObject;
 
 import java.util.ArrayList;
 import java.util.List;
-import com.example.a52n.testlogin.Newsclass;
 import com.example.a52n.testlogin.R;
 import com.example.a52n.testlogin.WebService;
 
@@ -46,7 +45,6 @@ public class My_news_Fragement extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = LayoutInflater.from(getActivity()).inflate(R.layout.menu_frag_news,container,false);
-
         listview=(ListView)view.findViewById(R.id.newslist);
 
         dialog=ProgressDialog.show(context,"请稍等...","数据获取中...",true);
@@ -94,8 +92,8 @@ public class My_news_Fragement extends Fragment {
                 listview.setAdapter(adapter);
             }
         }
-
     };
+
     public  List<Newsclass> getNewslist(){
         newslist=new ArrayList<>();
         try{

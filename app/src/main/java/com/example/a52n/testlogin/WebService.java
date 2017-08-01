@@ -23,7 +23,7 @@ import java.net.URL;
  */
 
 public class WebService {
-    private static  String IP ="192.168.48.42:8080";
+    private static  String IP ="59.110.156.44:8080/Testlogin";
     private static int RESULT_OK=1;
     //register flag=2
     private static int RESULT_REG_USER_EXIST=2;

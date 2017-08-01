@@ -8,56 +8,66 @@
 
 
     <ImageView
+        android:id="@+id/housekeeping"
         android:src="@drawable/housekeeping"
         android:layout_width="70dp"
         android:layout_height="70dp"
-        android:layout_marginLeft="155dp"
+        android:layout_centerHorizontal="true"
         android:layout_marginTop="110dp"/>
 
     <ImageView
         android:src="@drawable/teaching"
         android:layout_width="70dp"
         android:layout_height="70dp"
-        android:layout_marginLeft="75dp"
-        android:layout_marginTop="150dp"
-        />
+        android:layout_toLeftOf="@id/housekeeping"
+        android:layout_marginRight="29dp"
+        android:layout_marginTop="160dp" />
 
     <ImageView
         android:layout_height="70dp"
         android:src="@drawable/vegetable"
-        android:layout_marginLeft="235dp"
-        android:layout_marginTop="150dp"
+        android:layout_toRightOf="@id/housekeeping"
+        android:layout_marginLeft="29dp"
+        android:layout_marginTop="160dp"
         android:layout_width="70dp" />
 
     <ImageView
         android:layout_width="70dp"
         android:layout_height="70dp"
         android:background="@drawable/unlocking"
-        android:layout_marginLeft="55dp"
-        android:layout_marginTop="235dp"
+        android:layout_toLeftOf="@id/housekeeping"
+        android:layout_marginRight="53dp"
+        android:layout_marginTop="264dp" />
+
+    <ImageView
+        android:layout_height="70dp"
+        android:src="@drawable/renting"
+        android:layout_width="70dp"
+        android:layout_toRightOf="@id/housekeeping"
+        android:layout_marginLeft="53dp"
+        android:layout_marginTop="264dp"/>
+
+    <TextView
+        android:id="@+id/center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
         />
 
     <ImageView
         android:src="@drawable/creditmall"
         android:layout_width="70dp"
-        android:layout_marginLeft="110dp"
-        android:layout_marginTop="305dp"
+        android:layout_toLeftOf="@id/center"
+        android:layout_marginRight="19dp"
+        android:layout_marginTop="351dp"
         android:layout_height="70dp" />
-
-
-    <ImageView
-        android:layout_height="70dp"
-        android:src="@drawable/renting"
-        android:layout_marginLeft="255dp"
-        android:layout_marginTop="235dp"
-        android:layout_width="70dp" />
 
     <ImageView
         android:layout_height="70dp"
         android:src="@drawable/maintenance"
-        android:layout_marginLeft="200dp"
-        android:layout_marginTop="305dp"
+        android:layout_toRightOf="@id/center"
+        android:layout_marginLeft="19dp"
+        android:layout_marginTop="351dp"
         android:layout_width="70dp" />
-
 
 </RelativeLayout>
